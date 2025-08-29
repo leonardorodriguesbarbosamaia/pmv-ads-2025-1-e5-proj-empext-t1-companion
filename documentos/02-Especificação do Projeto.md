@@ -1,20 +1,22 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="01-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+### Definição do Problema
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. 
+Desenvolvedores que gerenciam múltiplos projetos enfrentam dificuldades para organizar tarefas diárias, manter visibilidade do que deve ser executado, gerar relatórios profissionais para clientes e gerenciar eficientemente tarefas recorrentes versus pontuais. A falta de uma ferramenta unificada resulta em perda de produtividade, dificuldade na prestação de contas e gestão fragmentada entre diferentes clientes.
 
-## Usuários
-| Tipo de Usuário   | Descrição | Responsabilidades |
-|------------------|-----------|------------------|
-| **xxx** | xxxxx | xxxxx |
+### Solução Proposta
 
-### Exemplo
+Sistema web híbrido kanban/diário com IA integrada que oferece organização temporal de tarefas, geração automática de relatórios profissionais e gestão inteligente de recorrências. A solução centraliza a gestão diária em uma interface visual intuitiva, automatiza processos repetitivos e fornece insights de produtividade.
 
-| Tipo de Usuário   | Descrição | Responsabilidades |
-|------------------|-----------|------------------|
-| **Administrador** | Gerencia a aplicação e os usuários. | Gerenciar usuários, configurar o sistema, acessar todos os relatórios. |
-| **Funcionário** | Usa a aplicação para suas tarefas principais. | Criar e editar registros, visualizar relatórios. |
+---
+
+## Usuário do Sistema
+
+| **Tipo de Usuário** | **Descrição** | **Responsabilidades** |
+|---------------------|---------------|----------------------|
+| **Desenvolvedor Freelancer** | Profissional autônomo que atende múltiplos clientes simultaneamente | Organizar tarefas diárias por cliente, controlar tempo trabalhado, gerar relatórios para prestação de contas, configurar tarefas recorrentes, acompanhar métricas de produtividade |
+
+---
 
 
 ## Arquitetura e Tecnologias
