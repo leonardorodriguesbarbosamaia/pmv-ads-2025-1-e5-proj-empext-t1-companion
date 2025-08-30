@@ -33,53 +33,66 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+**Técnica de priorização adotada: MoSCoW**
 
-Para mais informações, consulte os microfundamentos Fundamentos de Engenharia de Software e Engenharia de Requisitos de Software. 
+* **Must (ALTA)**: imprescindível ao MVP e diretamente ligado aos critérios de sucesso (kanban Futuro|Hoje|Passado; recorrentes; resumos IA; relatórios por empresa; timer/horas).
+* **Should (MÉDIA)**: eleva valor e usabilidade (templates de relatório; filtros/identidade visual por label).
+* **Could (BAIXA)**: diferencia, mas não bloqueia MVP (integrações externas, métricas avançadas). 
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+| ID | Descrição do Requisito | Prioridade |
+| -- | ---------------------- | ---------- |
+| RF-001 | Autenticação/Autorização com papéis (Proprietário, Admin, Colaborador, Cliente). | ALTA |
+| RF-002 | CRUD de Empresas/Labels com cor/identidade visual. | ALTA |
+| RF-003 | CRUD de Tarefas Diárias (título, empresa, estimativa, descrição). | ALTA |
+| RF-004 | Kanban temporal com colunas Futuro \| Hoje \| Passado e suporte a drag-and-drop. | ALTA |
+| RF-005 | Migração automática de tarefas de “Hoje” → “Passado” às 00h (scheduler). | ALTA |
+| RF-006 | Timer por tarefa (iniciar/pausar/finalizar) e rastreamento de horas. | ALTA |
+| RF-007 | Tarefas recorrentes via templates (diário/semanal/mensal). | ALTA |
+| RF-008 | Auto-população de recorrentes na coluna “Hoje” conforme cronograma. | ALTA |
+| RF-009 | Assistente IA: gerar resumos profissionais das tarefas concluídas no período. | ALTA |
+| RF-010 | Geração de relatórios por empresa/label (período selecionável). | ALTA |
+| RF-011 | Exportação em PDF dos relatórios com layout profissional. | ALTA |
+| RF-012 | Templates de relatório por empresa (branding e seções padrão). | MÉDIA |
+| RF-013 | Filtros/visões por empresa/label e por status (foco diário). | MÉDIA |
+| RF-014 | Onboarding guiado (setup inicial <10 min: empresas, labels, recorrentes). | MÉDIA |
+| RF-015 | Dashboard de métricas: tempo por empresa/tipo de tarefa, histórico semanal/mensal. | MÉDIA |
+| RF-016 | Histórico/auditoria de alterações de tarefa e tempo. | MÉDIA |
+| RF-017 | Integração GitHub: sincronizar commits/PRs como atividades. | BAIXA |
+| RF-018 | Integração Trello: importar cards como tarefas. | BAIXA |
+| RF-019 | Webhooks de deploy (Render/Netlify) exibidos no contexto das tarefas. | BAIXA |
+| RF-020 | Compartilhamento seguro de relatórios (link expira e/ou PDF). | BAIXA |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| ID | Descrição do Requisito | Prioridade |
+| -- | ---------------------- | ---------- |
+| RNF-001 | Responsivo (desktop prioritário; uso confortável no mobile). | ALTA |
+| RNF-002 | Desempenho: carregar dashboard em <3s; operações CRUD <1s. | ALTA |
+| RNF-003 | Relatórios gerados em <10s; processamento de IA <15s. | ALTA |
+| RNF-004 | APIs RESTful; banco normalizado com relacionamentos corretos. | ALTA |
+| RNF-005 | Confiabilidade do scheduler de 00h (idempotente; tolerante a falhas). | ALTA |
+| RNF-006 | Segurança: autenticação, RBAC, proteção a injeção/CSRF/XSS, logs. | ALTA |
+| RNF-007 | Privacidade: relatórios segmentados por empresa; compartilhamento restrito. | ALTA |
+| RNF-008 | Auditoria: timestamps e trilhas de alterações de tempo/tarefa. | MÉDIA |
+| RNF-009 | Exportação de dados (CSV/PDF) garantida para portabilidade. | MÉDIA |
+| RNF-010 | Observabilidade: métricas e logs mínimos para diagnósticos. | MÉDIA |
+| RNF-011 | Acessibilidade: contraste/teclado/aria nas telas principais. | MÉDIA |
+| RNF-012 | Compatibilidade: Chrome/Firefox/Edge recentes. | BAIXA |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+| ID | Restrição |
+| -- | --------- |
+| 01 | Prazo acadêmico: entregar MVP funcional até o fim do semestre. |
+| 02 | Escopo do MVP focado em: kanban temporal, recorrentes, timer, IA de resumos e relatório PDF por empresa. Integrações externas (GitHub/Trello/deploy) são Could (não bloqueiam entrega). |
+| 03 | Time de 6 pessoas, sem terceirização. Divisão por trilhas acima. |
+| 04 | Stack de referência (para manter consistência entre entregas): Frontend React; Backend Node.js/NestJS; SQL + Prisma; API de IA externa com prompt interno fixo. |
+| 05 | Custo zero/low-cost: uso de tiers gratuitos e serviços gerenciados mínimos; sem dados sensíveis de produção. |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Caso de Uso
 
