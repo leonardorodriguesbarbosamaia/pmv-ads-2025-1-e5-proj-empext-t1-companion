@@ -12,12 +12,9 @@ Sistema web híbrido kanban/diário com IA integrada que oferece organização t
 
 ## Usuário do Sistema
 
-| Tipo de Usuário | Descrição | Responsabilidades |
-| --------------- | --------- | ----------------- |
-| **Proprietário (Prestador)** | Dono da conta e principal usuário do sistema. | Cadastrar empresas/labels; criar, mover e concluir tarefas; iniciar/parar timer; configurar tarefas recorrentes; gerar e enviar relatórios. |
-| **Colaborador** | Profissional convidado que ajuda em tarefas de determinados clientes. | Criar/editar tarefas nas empresas às quais tem acesso; registrar tempo; marcar conclusão. |
-| **Administrador** | Usuário com papel de governança (pode ser o próprio Proprietário). | Gerenciar usuários/convites, permissões, templates de relatório e integrações. |
-| **Cliente (Leitor de Relatórios)** | Representante da empresa contratante (acesso somente leitura). | Acessar relatórios por período/label; baixar PDF. |
+| **Tipo de Usuário** | **Descrição** | **Responsabilidades** |
+|---------------------|---------------|----------------------|
+| **Desenvolvedor Freelancer** | Profissional autônomo que atende múltiplos clientes simultaneamente | Organizar tarefas diárias por cliente, controlar tempo trabalhado, gerar relatórios para prestação de contas, configurar tarefas recorrentes, acompanhar métricas de produtividade |
 
 ---
 
