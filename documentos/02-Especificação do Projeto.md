@@ -109,6 +109,22 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 > - [Astah](https://astah.net/)
 > - [Diagrams](https://app.diagrams.net/)
 
+## Arquitetura da Solução
+
+A seguir, descreve-se a estrutura do software, detalhando os componentes que formam a solução e o ambiente onde a aplicação será hospedada.
+
+A arquitetura adotada é baseada em uma plataforma em nuvem, que integra múltiplas camadas para suportar aplicações tanto para web quanto para dispositivos móveis. Essa arquitetura é modular e escalável, sendo projetada para ambientes distribuídos. Ela divide as responsabilidades entre as diversas camadas e se aproveita de serviços gerenciados para garantir alta disponibilidade, segurança robusta e facilidade de manutenção.
+
+Em termos gerais, a arquitetura é organizada nas seguintes camadas:
+
+- *Frontend/Clientes:* A camada responsável pela interação com o usuário, acessada por meio de navegadores ou aplicativos móveis.
+
+- *Backend:* Onde ocorrem o processamento das lógicas de negócio, a gestão dos dados e a integração com sistemas externos.
+
+- *Banco de Dados (SQL):* Armazena os dados estruturados da aplicação, assegurando integridade e alta performance nas consultas realizadas.
+
+![Arquitetura da Solução](<./img/ArquiteturaInicial.png>)
+
 ## Modelo da Base de Dados
 
 # Para banco de dados relacional:
