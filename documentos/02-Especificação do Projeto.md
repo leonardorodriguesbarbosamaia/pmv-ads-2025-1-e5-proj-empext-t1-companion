@@ -96,7 +96,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Caso de Uso
 
-![Diagrama de Caso de Uso](img/diagramadecasodeuso.jpeg)
+![Diagrama de Caso de Uso](img/diagrama.png)
 
 
 > **Links Úteis**:
