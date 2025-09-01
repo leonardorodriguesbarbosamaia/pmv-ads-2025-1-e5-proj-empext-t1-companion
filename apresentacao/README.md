@@ -1,6 +1,6 @@
 # Etapa 1 - Apresentação da proposta da Solução
-Arquivo de apresentação (em slides) da proposta de solução  
-Deve conter a descrição do cliente, o Project Model Canvas e o Diagrama de Caso de Uso.
+<img width="789" height="566" alt="image" src="https://github.com/user-attachments/assets/f705aadf-e500-43fe-8602-b0e2a2c8342f" />
+
 
 # Etapa 5 - Apresentação da Solução
 - Apresentação para Mostra de Extensão Eixo 5 ADS:
